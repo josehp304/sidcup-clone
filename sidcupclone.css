@@ -1,0 +1,535 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: white;
+  font-family: "montserrat";
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+  scroll-behavior: smooth;
+}
+
+.nav {
+  z-index: 99;
+  position: fixed;
+  height: 150px;
+  width: 100%;
+  /* background-color: grey; */
+}
+.nav ul {
+  padding-left: 150px;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: felx-start;
+  gap: 50px;
+}
+.nav img {
+  height: 100px;
+  width: 100px;
+}
+/* * end of nav  */
+/* cursor */
+
+.cursor {
+  height: 20px;
+  width: 20px;
+  background-color: #95c11e;
+  border-radius: 50%;
+  position: fixed;
+  z-index: 99;
+  transition: all linear 0.1s;
+}
+.cursor-blur {
+  height: 400px;
+  width: 400px;
+  background-color: #96c11e6d;
+  border-radius: 50%;
+  filter: blur(100px);
+  position: fixed;
+  z-index: 9;
+  transition: all linear 0.4s;
+}
+
+video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  position: fixed;
+  z-index: -2;
+}
+
+.main {
+  position: relative;
+
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.page1 {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+.title1 {
+  position: relative;
+}
+
+.title1 h1::before {
+  /* z-index:; */
+  content: "EAT. DRINK. PLAY.";
+  position: absolute;
+  color: black;
+  top: -6px;
+  left: -6px;
+  z-index: -1;
+  font-size: 8vmax;
+  font-weight: bold;
+  -webkit-text-stroke: 0.1px #95c11e;
+  -webkit-text-fill-color: black;
+}
+.title1 h1 {
+  z-index: 999;
+  font-size: 8vmax;
+  font-weight: bold;
+}
+
+.page1 h2 {
+  /* font-size: 130px; */
+  font-weight: bold;
+  padding: 20px 0px;
+}
+
+.page1 h3 {
+  font-size: 17px;
+  font-weight: 100;
+  width: 40%;
+  text-align: center;
+}
+.page1 .arrow {
+  height: 200px;
+  width: 200px;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 1px solid #95c11e;
+  position: absolute;
+  left: -2%;
+  bottom: 0%;
+  transition: all linear 0.2s;
+}
+.arrow i {
+  font-size: 90px;
+  /* font-weight: 900; */
+}
+.arrow:hover {
+  background-color: #ade023;
+  scale: 0.4;
+}
+
+.page2 {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  z-index: 10;
+}
+.scroller {
+  white-space: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+.scrollerc {
+  display: inline-block;
+  /* white-space: nowrap; */
+  animation-name: scroll;
+  animation-duration: 20s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+.scroller h4 {
+  -webkit-text-stroke: 0.1px #95c11e;
+  font-weight: bold;
+  font-size: 130px;
+  display: inline-block;
+  color: black;
+  margin-right: 40px;
+  position: relative;
+  z-index: 11;
+}
+.scroller::-webkit-scrollbar {
+  display: none;
+}
+.scroller h4:hover {
+  color: #95c11e;
+  /* background-color: red; */
+}
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+/* about section */
+
+.about {
+  height: 70vh;
+  position: relative;
+  z-index: 10;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.img1 img {
+  object-fit: cover;
+  height: 200px;
+  width: 200px;
+  border-radius: 30px;
+}
+.img2 img {
+  object-fit: cover;
+  height: 300px;
+  width: 200px;
+  border-radius: 30px;
+}
+.content {
+  width: 50vmax;
+}
+
+.content h1 {
+  text-align: center;
+  font-size: 50px;
+}
+.content p {
+  text-align: center;
+  font-size: 20px;
+  line-height: 30px;
+}
+/* cards */
+.card_container {
+  height: 60vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+.card {
+  height: 90%;
+  width: 25%;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  border-radius: 30px;
+  position: relative;
+}
+#card1 {
+  background-image: url(https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/home-toptracer.jpg?strip=all&lossy=1&sharp=1&fit=1024%2C682&ssl=1);
+}
+#card2 {
+  background-image: url(https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/hero-4.jpg?strip=all&lossy=1&sharp=1&fit=1024%2C1024&ssl=1);
+}
+#card3 {
+  background-image: url(https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/home-lessons.jpg?strip=all&lossy=1&sharp=1&fit=1024%2C682&ssl=1);
+}
+
+.card h1 {
+  font-size: 50px;
+  position: absolute;
+  bottom: 10%;
+  padding: 0% 10%;
+}
+
+.overlay {
+  height: 100%;
+  width: 100%;
+  background-color: #95c11e;
+  position: relative;
+  padding-top: 30%;
+  padding-left: 20px;
+  padding-right: 10px;
+  opacity: 0;
+  transition: all ease-in-out 0.3s;
+}
+.overlay h4 {
+  color: #000;
+  font-size: 50px;
+}
+.overlay p {
+  color: black;
+  padding-top: 5%;
+  line-height: 30px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.card:hover .overlay {
+  opacity: 1;
+}
+.card:hover {
+  transform: rotate3d(1, 1, 0, 20deg);
+}
+
+/* signup */
+
+.page3 {
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  z-index: 10;
+}
+
+.signup {
+  height: 30vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(to left bottom, #42a62e, #95c11e);
+}
+
+.img31 {
+  height: 100%;
+  width: 10%;
+  background-size: cover;
+  background-image: url(https://eiwgew27fhz.exactdn.com/wp-content/themes/puttosaurus/img/dots-side.svg);
+}
+.img32 {
+  height: 100%;
+  width: 10%;
+  background-size: cover;
+  background-image: url(https://eiwgew27fhz.exactdn.com/wp-content/themes/puttosaurus/img/dots-side.svg);
+}
+.content3 {
+  width: 50%;
+  margin-right: 200px;
+}
+.content3 h1 {
+  text-align: center;
+  font-weight: bold;
+  color: black;
+}
+
+/* quotes */
+.quotes {
+  position: relative;
+  height: 60vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: #95c11e; */
+}
+#up {
+  position: absolute;
+  height: 100px;
+  top: 30%;
+  left: 12%;
+}
+#down {
+  position: absolute;
+  height: 100px;
+  bottom: 30%;
+  right: 12%;
+}
+.quotes p {
+  font-size: 30px;
+  width: 60%;
+  text-align: center;
+  margin: 0 auto;
+}
+/* what are you waiting for section */
+.waiting_container {
+  /* position: relative; */
+  height: 50vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* margin: 10% 0%; */
+  gap: 20px;
+  /* background-color: red; */
+}
+
+.cardw {
+  position: relative;
+  height: 43%;
+  width: 28%;
+  border-radius: 20px;
+  /* padding-bottom: 10%; */
+  overflow: hidden;
+}
+
+.cardw img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transform: scale(1.1);
+  transition: all ease 0.5s;
+}
+.cardw h4 {
+  position: absolute;
+  z-index: 10;
+  font-size: 35px;
+  top: 30%;
+  left: 10%;
+  font-weight: 900;
+}
+.overlayw {
+  /* position: relative; */
+  background-color: #95c11e;
+  height: 110%;
+  width: 100%;
+  z-index: 10;
+  display: block;
+}
+
+.cardw:hover .overlayw {
+  display: none;
+  transition: all ease 0.5s;
+}
+
+.cardw:hover img {
+  transform: scale(1);
+}
+.waiting {
+  position: relative;
+}
+.waiting h1 {
+  position: absolute;
+  color: black;
+  font-size: 5vmax;
+  margin: 0 auto;
+  -webkit-text-stroke: 1px white;
+  top: 10%;
+}
+
+.waiting:hover h1 {
+  -webkit-text-stroke: 1px #42a62e;
+}
+
+/* footer */
+.footer {
+  position: relative;
+  height: 40vh;
+  width: 100%;
+  background: linear-gradient(to top right, #ade023, #42a62e);
+  z-index: 10;
+  display: flex;
+}
+.hfimgc {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  /* background-color: red; */
+}
+.hfimg {
+  height: 120px;
+  position: absolute;
+  top: 30%;
+  left: 35%;
+  z-index: 11;
+  transition: all linear 0.2s;
+}
+#fimg {
+  height: 90%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 10;
+}
+.hfimg:hover {
+  transform: scale(0.8);
+}
+
+.instap {
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: 70%;
+  left: 35%;
+  background-image: url(https://www.nicepng.com/png/full/1-14885_instagram-logo-transparent-instagram-logo-vector.png);
+  background-size: cover;
+  z-index: 11;
+  transition: all linear 0.1s;
+  /* background-color: white; */
+}
+
+.instap:hover {
+  /* height: 100px; */
+  /* background-size:cover */
+  transform: scale(2);
+  background-image: url(insta2.png);
+}
+
+.f1 {
+  height: 100%;
+  width: 20%;
+  position: relative;
+}
+
+.f2 {
+  height: 100%;
+  width: 25%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  /* background-color: red; */
+}
+
+.f2 h4 {
+  color: black;
+  font-size: 2vmax;
+  line-height: 150%;
+  font-weight: 900;
+}
+.f3 {
+  height: 100%;
+  width: 25%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  /* background-color: red; */
+}
+.f3 h4 {
+  color: black;
+  font-size: 2vmax;
+  line-height: 150%;
+  font-weight: 900;
+}
+.f4 {
+  height: 100%;
+  width: 25%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  /* background-color: red; */
+}
+.f4 h4 {
+  color: black;
+  font-size: 2vmax;
+  line-height: 150%;
+  font-weight: 900;
+}
+.f4 h3 {
+  color: black;
+  font-size: 1vmax;
+  line-height: 150%;
+  font-weight: bold;
+}
