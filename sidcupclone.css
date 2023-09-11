@@ -91,7 +91,7 @@ video {
   z-index: -1;
   font-size: 8vmax;
   font-weight: bold;
-  -webkit-text-stroke: 0.1px #95c11e;
+  -webkit-text-stroke: 1px #95c11e;
   -webkit-text-fill-color: black;
 }
 .title1 h1 {
@@ -155,7 +155,7 @@ video {
   animation-iteration-count: infinite;
 }
 .scroller h4 {
-  -webkit-text-stroke: 0.1px #95c11e;
+  -webkit-text-stroke: 1px #95c11e;
   font-weight: bold;
   font-size: 130px;
   display: inline-block;
